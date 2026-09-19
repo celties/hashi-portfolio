@@ -287,8 +287,8 @@ const PROJECTS = [
     highlights: ["OCRは端末内で完結、APIコストゼロ", "HEIC→JPEG自動変換", "ショートカット3ステップで完了"],
   },
   {
-    id: "naegi-order",
-    title: "苗木注文書管理システム",
+    id: "order-reader",
+    title: "注文書読み取りシステム",
     subtitle: "実家の手伝いから生まれた業務アプリ",
     category: "automation",
     period: "2026.09",
@@ -303,7 +303,7 @@ const PROJECTS = [
       "使う人が業務の途中で迷わないよう、サイドバーを消して画面を一本道にし、和やかな緑基調のUIにしています。パソコンに慣れていない人でも、写真を選んで待つだけで終わります。",
     ],
     tech: ["Python", "Streamlit", "Google Gemini API", "pandas", "Pillow / pillow-heif"],
-    links: [{ label: "GitHub", href: "https://github.com/celties/naegi-order" }],
+    links: [],
     highlights: ["手書き注文書をAIで読み取り", "商品マスタとのあいまい照合で表記ゆれを吸収", "複数枚の並列処理とHEIC対応", "実家の現場でそのまま使われている"],
   },
   {
@@ -414,8 +414,8 @@ const STRENGTHS = [
 
 const EXPERIENCE = [
   {
-    role: "苗木注文書管理システムの開発",
-    org: "実家の手伝い（園芸業）",
+    role: "注文書読み取りシステムの開発",
+    org: "実家の手伝い",
     period: "2026.09",
     note: "実家の手伝いで紙の注文書を扱っていたところから、手書きの注文書をAIで読み取って集計する業務アプリを自分で作り、現場に入れた。要件を決めるところから運用まで、ひと通り自分で担当している。",
   },
