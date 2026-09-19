@@ -5,7 +5,7 @@
      ネイビー×オレンジ … @nbatrainerfromjapan のブランドカラー
      胸の TMU … 東京都立大学
      バスケットボール … セルティックスとNBAトレーナーという目標
-     口ひげと BELIEVE の貼り紙 … テッド・ラッソ
+     頭上の BELIEVE の貼り紙 … テッド・ラッソ
    ドット絵は文字列マップなので、1文字書き換えれば見た目を直せます。
    ========================================================= */
 (function () {
@@ -21,55 +21,79 @@
     W: "#F4F6F9", // 白（ショーツ・シューズ）
     G: "#5C7A9E", // ソール・影
     C: "#C8A96A", // ゴールドの差し色
-    T: "#6B4A2E", // テッド・ラッソの口ひげ
     B: "#E2702F", // ボール
     D: "#8A3B14", // ボールの線
   };
 
-  /* 立ち姿：21 × 26 */
+  /* 立ち姿：33 × 48 */
   const BODY = [
-    ".....................",
-    ".......HHHHHHH.......",
-    "......HHHHHHHHH......",
-    ".....HHHHHHHHHHH.....",
-    ".....HHHHHHHHHHH.....",
-    ".....OOOOOOOOOOO.....",
-    ".....HSSSSSSSSSH.....",
-    ".....HSSKSSSKSSH.....",
-    ".....HSSSSSSSSSH.....",
-    "......SSTTTTTSS......",
-    "......SSSKKKSSS......",
-    ".......NNNNNNN.......",
-    "...NNNNNNNNNNNNNNN...",
-    "..SNOOONONNNONONONS..",
-    "..SNNONNOONOONONONS..",
-    "..SNNONNONONONONONS..",
-    "..SNNONNONNNONONONS..",
-    "...NNONNONNNONOOON...",
-    "....WWWWWWWWWWWWW....",
-    "....WWWWWWWWWWWWW....",
-    ".....SSSS...SSSS.....",
-    ".....SSSS...SSSS.....",
-    ".....SSSS...SSSS.....",
-    "....WWWWW...WWWWW....",
-    "....GGGGG...GGGGG....",
-    ".....................",
+    ".................................",
+    ".................................",
+    ".............HHHHHHH.............",
+    "...........HHHHHHHHHHH...........",
+    "..........HHHHHHHHHHHHH..........",
+    "........HHHHHHHHHHHHHHHHH........",
+    "........HHHHHHHHHHHHHHHHH........",
+    "........HHHHHHHHHHHHHHHHH........",
+    "........OOOOOOOOOOOOOOOOO........",
+    "........OOOOOOOOOOOOOOOOO........",
+    "........HSSSSSSSSSSSSSSSH........",
+    "........HSSSSSSSSSSSSSSSH........",
+    "........HSSSKKSSSSSKKSSSH........",
+    "........HSSSKKSSSSSKKSSSH........",
+    "........HSSSKKSSSSSKKSSSH........",
+    "........HSSSSSSSSSSSSSSSH........",
+    "........SSSSSSSSSSSSSSSSS........",
+    "........SSSSSSSKKKSSSSSSS........",
+    "........SSSSSSSSSSSSSSSSS........",
+    ".............SSSSSSS.............",
+    "............NNNNNNNNN............",
+    ".......NNNNNNNNNNNNNNNNNNN.......",
+    ".....NNNNNNNNNNNNNNNNNNNNNNN.....",
+    "..SSSNNNNNNNNNNNNNNNNNNNNNNNSSS..",
+    "..SSSNNOOOOONONNNNNONONNNONNSSS..",
+    "..SSSNNNNONNNOONNNOONONNNONNSSS..",
+    "..SSSNNNNONNNONONONONONNNONNSSS..",
+    "..SSSNNNNONNNONNONNONONNNONNSSS..",
+    "..SSSNNNNONNNONNNNNONONNNONNSSS..",
+    "..SSSNNNNONNNONNNNNONONNNONNSSS..",
+    "..SSSNNNNONNNONNNNNONNOOONNNSSS..",
+    "..SSSNNNNNNNNNNNNNNNNNNNNNNNSSS..",
+    "..SSSNNNNNNNNNNNNNNNNNNNNNNNSSS..",
+    ".....NNNNNNNNNNNNNNNNNNNNNNN.....",
+    ".......WWWWWWWWWWWWWWWWWWW.......",
+    ".......WWWWWWWWWWWWWWWWWWW.......",
+    ".......WWWWWWWWWWWWWWWWWWW.......",
+    ".......WWWWWWWWWWWWWWWWWWW.......",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".........SSSSSS...SSSSSS.........",
+    ".......WWWWWWWW...WWWWWWWW.......",
+    ".......WWWWWWWW...WWWWWWWW.......",
+    ".......GGGGGGGG...GGGGGGGG.......",
   ];
 
-  /* まばたき：7行目を閉じ目に差し替える */
-  const EYES_OPEN  = ".....HSSKSSSKSSH.....";
-  const EYES_SHUT  = ".....HSSSSSSSSSH.....";
-  const EYES_ROW   = 7;
+  /* まばたき：目の上下だけ肌に戻すと、細い線が残って自然に閉じて見える */
+  const EYE_ROWS = [12, 14];
+  const EYE_COLS = [12, 13, 19, 20];
 
-  /* バスケットボール：7 × 7 */
+  /* バスケットボール：11 × 11 */
   const BALL = [
-    "..BBB..",
-    ".BBDBB.",
-    "BBBDBBB",
-    "DDDDDDD",
-    "BBBDBBB",
-    ".BBDBB.",
-    "..BBB..",
+    "...DBDBD...",
+    "..DBBDBBD..",
+    ".BDBBDBBDB.",
+    "BDBBBDBBBDB",
+    "BDBBBDBBBDB",
+    "DDDDDDDDDDD",
+    "BDBBBDBBBDB",
+    "BDBBBDBBBDB",
+    ".BDBBDBBDB.",
+    "..DBBDBBD..",
+    "...DBDBD...",
   ];
 
   function svg(map, px, cls) {
@@ -102,7 +126,13 @@
     let shut = false;
     const redraw = () => {
       const m = BODY.slice();
-      m[EYES_ROW] = shut ? EYES_SHUT : EYES_OPEN;
+      if (shut) {
+        EYE_ROWS.forEach((r) => {
+          const row = m[r].split("");
+          EYE_COLS.forEach((c) => (row[c] = "S"));
+          m[r] = row.join("");
+        });
+      }
       body.innerHTML = svg(m, px, "px-svg");
     };
     const blink = () => {
@@ -116,7 +146,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    mount(document.getElementById("pxHero"), 7);
-    mount(document.getElementById("pxAbout"), 5);
+    mount(document.getElementById("pxHero"), 5);
+    mount(document.getElementById("pxAbout"), 4);
   });
 })();
