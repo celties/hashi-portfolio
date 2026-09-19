@@ -99,6 +99,31 @@
         )}</p><p class="like-n">${esc(i.note)}</p></div></div>`
     ).join("");
 
+    $("#favLead").textContent = FAVORITES.lead;
+    $("#favs").innerHTML = FAVORITES.items
+      .map(
+        (f) => `<article class="fav rv">
+            <header class="fav-h">
+              <span class="fav-e" aria-hidden="true">${f.emoji}</span>
+              <div class="fav-hb">
+                <span class="fav-kind">${esc(f.kind)}</span>
+                <h4 class="fav-t">${esc(f.title)}</h4>
+                <p class="fav-en">${esc(f.en)}</p>
+              </div>
+            </header>
+            <div class="fav-meta">${f.meta.map((m) => `<span class="badge">${esc(m)}</span>`).join("")}</div>
+            <p class="fav-what">${esc(f.what)}</p>
+            <p class="pl-k">自分に効いているところ</p>
+            <p class="fav-imp">${esc(f.impact)}</p>
+            <blockquote class="fav-q">
+              <p class="fav-qt">${esc(f.quote.text)}</p>
+              ${f.quote.sub ? `<p class="fav-qs">${esc(f.quote.sub)}</p>` : ""}
+              <cite class="fav-qb">— ${esc(f.quote.by)}</cite>
+            </blockquote>
+          </article>`
+      )
+      .join("");
+
     $("#strengths").innerHTML = STRENGTHS.map(
       (t, n) =>
         `<div class="str rv"><span class="str-n">0${n + 1}</span><p class="str-t">${esc(t.title)}</p><p class="str-b">${esc(
