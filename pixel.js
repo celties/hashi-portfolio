@@ -5,6 +5,7 @@
      ネイビー×オレンジ … @nbatrainerfromjapan のブランドカラー
      胸の TMU … 東京都立大学
      バスケットボール … セルティックスとNBAトレーナーという目標
+     口ひげと BELIEVE の貼り紙 … テッド・ラッソ
    ドット絵は文字列マップなので、1文字書き換えれば見た目を直せます。
    ========================================================= */
 (function () {
@@ -20,6 +21,7 @@
     W: "#F4F6F9", // 白（ショーツ・シューズ）
     G: "#5C7A9E", // ソール・影
     C: "#C8A96A", // ゴールドの差し色
+    T: "#6B4A2E", // テッド・ラッソの口ひげ
     B: "#E2702F", // ボール
     D: "#8A3B14", // ボールの線
   };
@@ -35,8 +37,8 @@
     ".....HSSSSSSSSSH.....",
     ".....HSSKSSSKSSH.....",
     ".....HSSSSSSSSSH.....",
+    "......SSTTTTTSS......",
     "......SSSKKKSSS......",
-    ".......SSSSSSS.......",
     ".......NNNNNNN.......",
     "...NNNNNNNNNNNNNNN...",
     "..SNOOONONNNONONONS..",
@@ -89,6 +91,7 @@
     if (!host) return;
     host.innerHTML =
       `<div class="px-stage">
+         <div class="px-believe" aria-hidden="true"><span>BELIEVE</span></div>
          <div class="px-body">${svg(BODY, px, "px-svg")}</div>
          <div class="px-ball">${svg(BALL, px, "px-svg")}</div>
          <div class="px-shadow"></div>

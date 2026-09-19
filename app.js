@@ -173,21 +173,32 @@
       )
       .join("");
 
-    $("#careerTop").innerHTML =
-      `<div class="cr-top rv"><div class="cr-goals"><div><p class="cr-k">目標</p><p class="cr-v">${esc(
-        CAREER.goal
-      )}</p></div><div><p class="cr-k">軸</p><p class="cr-v">${esc(
-        CAREER.axis
-      )}</p></div></div><p class="cr-lead">${esc(CAREER.lead)}</p></div>`;
+    $("#story").innerHTML =
+      `<article class="story-card rv"><h4 class="story-t">${esc(WORK_STORY.title)}</h4>${WORK_STORY.body
+        .map((p) => `<p>${esc(p)}</p>`)
+        .join("")}</article>`;
 
-    $("#careerGroups").innerHTML = CAREER.groups
+    $("#goal").innerHTML =
+      `<div class="goal-card rv">
+         <p class="goal-k">GOAL</p>
+         <p class="goal-v">${esc(CAREER.goal)}</p>
+         <p class="goal-tag">${esc(CAREER.tagline)}</p>
+         <div class="goal-axis"><span>軸</span><b>${esc(CAREER.axis)}</b></div>
+       </div>`;
+
+    $("#why").innerHTML =
+      `<div class="why-card rv">${CAREER.why.map((p) => `<p>${esc(p)}</p>`).join("")}</div>`;
+
+    $("#steps").innerHTML = CAREER.steps
       .map(
-        (g) =>
-          `<div class="cr rv"><p class="cr-label">${esc(g.label)}</p><p class="cr-note">${esc(
-            g.note
-          )}</p>${g.items ? `<div class="cr-items">${g.items.map((i) => `<span class="co">${esc(i)}</span>`).join("")}</div>` : ""}</div>`
+        (s) =>
+          `<div class="st-row rv"><span class="st-no">${esc(s.no)}</span><div><p class="st-t">${esc(
+            s.title
+          )}</p><p class="st-n">${esc(s.note)}</p></div></div>`
       )
       .join("");
+
+    $("#careerClosing").textContent = CAREER.closing;
 
     $("#contacts").innerHTML = PROFILE.contacts
       .map(
