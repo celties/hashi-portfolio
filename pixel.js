@@ -16,6 +16,7 @@
     H: "#161E2B", // 髪
     O: "#F2622E", // オレンジ（ヘッドバンド・ライン）
     S: "#F3CBA4", // 肌
+    P: "#E8A183", // 頬
     K: "#131A25", // 目・口
     N: "#12233A", // ネイビーのウェア
     W: "#F4F6F9", // 白（ショーツ・シューズ）
@@ -39,13 +40,13 @@
     "........OOOOOOOOOOOOOOOOO........",
     "........HSSSSSSSSSSSSSSSH........",
     "........HSSSSSSSSSSSSSSSH........",
-    "........HSSSKKSSSSSKKSSSH........",
+    "........HSSSWKSSSSSWKSSSH........",
     "........HSSSKKSSSSSKKSSSH........",
     "........HSSSKKSSSSSKKSSSH........",
     "........HSSSSSSSSSSSSSSSH........",
-    "........SSSSSSSSSSSSSSSSS........",
-    "........SSSSSSSKKKSSSSSSS........",
-    "........SSSSSSSSSSSSSSSSS........",
+    ".........SPPSSSSSSSSSPPS.........",
+    "..........SSSSKSSSKSSSS..........",
+    "...........SSSSKKKSSSS...........",
     ".............SSSSSSS.............",
     "............NNNNNNNNN............",
     ".......NNNNNNNNNNNNNNNNNNN.......",
