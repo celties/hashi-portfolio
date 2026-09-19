@@ -120,7 +120,7 @@
         (g) =>
           `<div class="cr rv"><p class="cr-label">${esc(g.label)}</p><p class="cr-note">${esc(
             g.note
-          )}</p><div class="cr-items">${g.items.map((i) => `<span class="co">${esc(i)}</span>`).join("")}</div></div>`
+          )}</p>${g.items ? `<div class="cr-items">${g.items.map((i) => `<span class="co">${esc(i)}</span>`).join("")}</div>` : ""}</div>`
       )
       .join("");
 

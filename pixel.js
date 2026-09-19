@@ -3,7 +3,7 @@
    これまでの情報から像を組みました：
      ヘッドバンド … 早起き（日の出前に起きる人）
      ネイビー×オレンジ … @nbatrainerfromjapan のブランドカラー
-     胸の H … Hashi
+     胸の TMU … 東京都立大学
      バスケットボール … セルティックスとNBAトレーナーという目標
    ドット絵は文字列マップなので、1文字書き換えれば見た目を直せます。
    ========================================================= */
@@ -24,39 +24,39 @@
     D: "#8A3B14", // ボールの線
   };
 
-  /* 立ち姿：18 × 26 */
+  /* 立ち姿：21 × 26 */
   const BODY = [
-    "..................",
-    "......HHHHHH......",
-    ".....HHHHHHHH.....",
-    "....HHHHHHHHHH....",
-    "....HHHHHHHHHH....",
-    "....OOOOOOOOOO....",
-    "....HSSSSSSSSH....",
-    "....HSKSSSSKSH....",
-    "....HSSSSSSSSH....",
-    ".....SSSKKSSS.....",
-    "......SSSSSS......",
-    "......NNNNNN......",
-    "....NNNNNNNNNN....",
-    "...SNNNONNONNNS...",
-    "...SNNNONNONNNS...",
-    "...SNNNOOOONNNS...",
-    "...SNNNONNONNNS...",
-    "....NNNONNONNN....",
-    "....WWWWWWWWWW....",
-    "....WWWWWWWWWW....",
-    "....SSSS..SSSS....",
-    "....SSSS..SSSS....",
-    "....SSSS..SSSS....",
-    "...WWWWW..WWWWW...",
-    "...GGGGG..GGGGG...",
-    "..................",
+    ".....................",
+    ".......HHHHHHH.......",
+    "......HHHHHHHHH......",
+    ".....HHHHHHHHHHH.....",
+    ".....HHHHHHHHHHH.....",
+    ".....OOOOOOOOOOO.....",
+    ".....HSSSSSSSSSH.....",
+    ".....HSSKSSSKSSH.....",
+    ".....HSSSSSSSSSH.....",
+    "......SSSKKKSSS......",
+    ".......SSSSSSS.......",
+    ".......NNNNNNN.......",
+    "...NNNNNNNNNNNNNNN...",
+    "..SNOOONONNNONONONS..",
+    "..SNNONNOONOONONONS..",
+    "..SNNONNONONONONONS..",
+    "..SNNONNONNNONONONS..",
+    "...NNONNONNNONOOON...",
+    "....WWWWWWWWWWWWW....",
+    "....WWWWWWWWWWWWW....",
+    ".....SSSS...SSSS.....",
+    ".....SSSS...SSSS.....",
+    ".....SSSS...SSSS.....",
+    "....WWWWW...WWWWW....",
+    "....GGGGG...GGGGG....",
+    ".....................",
   ];
 
   /* まばたき：7行目を閉じ目に差し替える */
-  const EYES_OPEN  = "....HSKSSSSKSH....";
-  const EYES_SHUT  = "....HSSSSSSSSH....";
+  const EYES_OPEN  = ".....HSSKSSSKSSH.....";
+  const EYES_SHUT  = ".....HSSSSSSSSSH.....";
   const EYES_ROW   = 7;
 
   /* バスケットボール：7 × 7 */
