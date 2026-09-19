@@ -38,7 +38,6 @@ const PROJECTS = [
     subtitle: "早起き習慣トラッカー",
     category: "habit",
     period: "2026.05 —",
-    status: "稼働中",
     featured: true,
     emoji: "🌅",
     summary:
@@ -58,7 +57,6 @@ const PROJECTS = [
     subtitle: "筋トレ記録Webアプリ",
     category: "habit",
     period: "2026.06 —",
-    status: "公開中",
     featured: true,
     emoji: "🏋️",
     summary:
@@ -78,7 +76,6 @@ const PROJECTS = [
     subtitle: "ホグワーツ風の日記PWA",
     category: "habit",
     period: "2026.06",
-    status: "完成",
     emoji: "🕯️",
     summary:
       "本を開くアニメーションから始まる、ダークファンタジー世界観の日記アプリ。書いた内容はNotionに保存され、手書きページはOCRで取り込めます。",
@@ -98,7 +95,6 @@ const PROJECTS = [
     subtitle: "プレイブック作成・管理アプリ",
     category: "basketball",
     period: "2026.06",
-    status: "公開中",
     featured: true,
     emoji: "🏀",
     summary:
@@ -118,7 +114,6 @@ const PROJECTS = [
     subtitle: "試合スタッツ記録アプリ",
     category: "basketball",
     period: "2026.06 — 2026.08",
-    status: "開発中",
     emoji: "📊",
     summary:
       "試合中にスタッツを打ち込み、チーム・選手・キャリア単位で集計するモバイルアプリ。React Native（Expo）でiOS・Android・Webを1つのコードベースから出しています。",
@@ -136,7 +131,6 @@ const PROJECTS = [
     subtitle: "ボストン・セルティックス百科事典",
     category: "basketball",
     period: "2026.06",
-    status: "公開中",
     emoji: "☘️",
     summary:
       "現役選手8名、レジェンド10名、優勝18回ぶんの歴史を日本語でまとめたファン向けの事典アプリ。",
@@ -154,7 +148,6 @@ const PROJECTS = [
     subtitle: "日本 vs ブラジル",
     category: "basketball",
     period: "2026.06",
-    status: "完成",
     emoji: "⚽️",
     summary:
       "試合をみんなで観るときに、スコアや得点者を予想して盛り上がるための1ページアプリ。",
@@ -174,7 +167,6 @@ const PROJECTS = [
     subtitle: "写真 → リール動画 自動生成",
     category: "video",
     period: "2026.05",
-    status: "稼働中",
     featured: true,
     emoji: "🎬",
     summary:
@@ -194,7 +186,6 @@ const PROJECTS = [
     subtitle: "手書きジャーナル → タイピング動画",
     category: "video",
     period: "2026.08",
-    status: "稼働中",
     emoji: "✍️",
     summary:
       "手書きのジャーナル写真から、Notionのページに1文字ずつ打ち込まれていく10秒の縦型動画を生成するツール。Vlogリールの末尾に差し込んでいます。",
@@ -214,7 +205,6 @@ const PROJECTS = [
     subtitle: "Remotion製リール動画テンプレート",
     category: "video",
     period: "2026.09 —",
-    status: "運用中",
     emoji: "📱",
     summary:
       "台本のJSONを書くだけで、Instagram用の縦型リール（1080×1920）が1本書き上がる動画生成基盤。Reactで動画を組んでいます。",
@@ -232,7 +222,6 @@ const PROJECTS = [
     subtitle: "Instagramアカウント運用",
     category: "video",
     period: "2026.09 —",
-    status: "運用中",
     emoji: "🧡",
     summary:
       "理学療法とバスケットボールをつなぐ発信アカウント。ブランドカラー・投稿フォーマット・制作パイプラインまで自分で設計して運用しています。",
@@ -253,7 +242,6 @@ const PROJECTS = [
     subtitle: "クレカ利用通知 → Notion",
     category: "automation",
     period: "2026.07 —",
-    status: "毎日稼働中",
     featured: true,
     emoji: "💳",
     summary:
@@ -273,7 +261,6 @@ const PROJECTS = [
     subtitle: "写真1枚 → Notion",
     category: "automation",
     period: "2026.04",
-    status: "稼働中",
     emoji: "🧾",
     summary:
       "レシートを撮るだけでNotionの家計簿に支出が入るショートカット。OCRはmacOS内蔵のVision frameworkを使うので、APIキーも費用も要りません。",
@@ -292,7 +279,6 @@ const PROJECTS = [
     subtitle: "実家の手伝いから生まれた業務アプリ",
     category: "automation",
     period: "2026.09",
-    status: "運用中",
     featured: true,
     emoji: "🌱",
     summary:
@@ -312,7 +298,6 @@ const PROJECTS = [
     subtitle: "繰り返しタスクとリマインド",
     category: "automation",
     period: "2026.05",
-    status: "稼働中",
     emoji: "🔁",
     summary:
       "Notionで管理しているタスクを毎日点検し、繰り返しタスクの次回分を自動生成して、期限が近いものをmacOSの通知で知らせるスクリプト。",
@@ -332,7 +317,6 @@ const PROJECTS = [
     subtitle: "3D人体解剖アトラス",
     category: "study",
     period: "2026.06",
-    status: "開発中",
     featured: true,
     emoji: "🦴",
     summary:
@@ -352,7 +336,6 @@ const PROJECTS = [
     subtitle: "Notion + 週次自動チェック",
     category: "study",
     period: "2026.07 —",
-    status: "稼働中",
     emoji: "🔍",
     summary:
       "志望企業をNotionのデータベースで管理し、毎週月曜の朝に新着募集を自動で巡回して追記する仕組み。14社を継続ウォッチしています。",

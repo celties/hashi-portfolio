@@ -48,7 +48,6 @@ python3 -m http.server 8080
   subtitle: "ひとことで言うと",
   category: "habit",      // habit | basketball | video | automation | study
   period: "2026.10",
-  status: "開発中",        // 「稼働/公開/運用/納品」を含むとオレンジのバッジになります
   featured: false,        // true にすると2カラム幅の大きいカードに
   emoji: "✨",
   summary: "カードに出る3行の要約。",

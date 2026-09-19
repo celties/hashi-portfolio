@@ -207,7 +207,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   font-family:var(--en);font-size:10.5px;letter-spacing:.06em;font-weight:500;
   padding:4px 10px;border-radius:99px;border:1px solid var(--line-2);color:var(--txt-3);
 }
-.badge.live{border-color:rgba(242,98,46,.4);color:var(--orange);background:var(--orange-soft)}
 .card-sum{display:block;font-size:13.8px;color:var(--txt-2);line-height:1.8;
   display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card.feat .card-sum{-webkit-line-clamp:2;line-clamp:2}

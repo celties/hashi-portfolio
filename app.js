@@ -9,8 +9,6 @@
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const LIVE = /稼働|公開|運用|納品/;
-
   /* ---------- HERO : タイプライター ---------- */
   function typeLead() {
     const el = $("#heroLead");
@@ -34,13 +32,12 @@
 
   /* ---------- HERO : 数字 ---------- */
   function renderStats() {
-    const live = PROJECTS.filter((p) => LIVE.test(p.status)).length;
     const techs = new Set(PROJECTS.flatMap((p) => p.tech)).size;
     const stats = [
-      { k: "Projects",   v: PROJECTS.length,          u: "本" },
-      { k: "In Service", v: live,                      u: "本" },
-      { k: "Tech Used",  v: techs,                     u: "種" },
-      { k: "Since",      v: "2026.04",                 u: "" },
+      { k: "Projects",   v: PROJECTS.length,                 u: "本" },
+      { k: "Fields",     v: CATEGORIES.length - 1,           u: "分野" },
+      { k: "Tech Used",  v: techs,                            u: "種" },
+      { k: "Since",      v: "2026.04",                        u: "" },
     ];
     $("#heroStats").innerHTML = stats
       .map(
@@ -243,8 +240,8 @@
           </span>
         </div>
         <div class="card-meta">
-          <span class="badge${LIVE.test(p.status) ? " live" : ""}">${esc(p.status)}</span>
           <span class="badge">${esc(p.period)}</span>
+          <span class="badge">${esc((CATEGORIES.find((c) => c.id === p.category) || {}).label || "")}</span>
         </div>
         <p class="card-sum">${esc(p.summary)}</p>
         <div class="card-tech">${tags}${rest}</div>
@@ -304,7 +301,6 @@
         </div>
       </div>
       <div class="m-meta">
-        <span class="badge${LIVE.test(p.status) ? " live" : ""}">${esc(p.status)}</span>
         <span class="badge">${esc(p.period)}</span>
         <span class="badge">${esc((CATEGORIES.find((c) => c.id === p.category) || {}).label || "")}</span>
       </div>
