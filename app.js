@@ -80,6 +80,11 @@
     ).join("");
 
 
+    $("#town").innerHTML =
+      `<div class="town-card rv"><p class="town-name">${esc(HOMETOWN.name)}</p><div class="town-facts">${HOMETOWN.facts
+        .map((f) => `<span class="tf"><i>${esc(f.k)}</i><b>${esc(f.v)}</b></span>`)
+        .join("")}</div><div class="town-body">${HOMETOWN.body.map((p) => `<p>${esc(p)}</p>`).join("")}</div></div>`;
+
     $("#roots").innerHTML = ROOTS.map(
       (r) =>
         `<li><span class="rt-year">${esc(r.year)}</span><span class="rt-body"><b>${esc(r.title)}</b>${

@@ -475,3 +475,20 @@ body.lock{overflow:hidden}
   .rt-year{width:auto}
   .cr-goals{gap:20px}
 }
+
+/* ---------- 生まれた町 ---------- */
+.town-card{
+  padding:26px;border:1px solid var(--line);border-radius:var(--r-lg);
+  background:linear-gradient(155deg,rgba(200,169,106,.09),rgba(18,35,58,.5) 55%);
+}
+.town-name{font-size:1.15rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.town-name::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.town-facts{display:flex;flex-wrap:wrap;gap:10px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.tf{
+  display:flex;flex-direction:column;gap:2px;padding:10px 16px;border-radius:12px;
+  background:rgba(11,22,34,.5);border:1px solid var(--line);
+}
+.tf i{font-style:normal;font-size:10.5px;letter-spacing:.1em;color:var(--txt-3)}
+.tf b{font-size:13.5px;font-weight:500}
+.town-body p{font-size:14px;color:var(--txt-2);line-height:2;margin-bottom:13px}
+.town-body p:last-child{margin-bottom:0;color:var(--gold)}
