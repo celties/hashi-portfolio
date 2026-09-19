@@ -80,6 +80,25 @@
     ).join("");
 
 
+    $("#perLead").textContent = PERSONALITY.lead;
+    $("#perSummary").textContent = PERSONALITY.summary;
+    $("#pers").innerHTML = PERSONALITY.types
+      .map(
+        (t) => `<article class="per rv">
+            <header class="per-h">
+              <span class="per-code">${esc(t.code)}</span>
+              <div>
+                <span class="per-tag">${esc(t.tag)}</span>
+                <p class="per-name">${esc(t.name)}</p>
+              </div>
+            </header>
+            <p class="per-desc">${esc(t.desc)}</p>
+            <p class="pl-k">自分に当てはまるところ</p>
+            <p class="per-mine">${esc(t.mine)}</p>
+          </article>`
+      )
+      .join("");
+
     $("#town").innerHTML =
       `<div class="town-card rv"><p class="town-name">${esc(HOMETOWN.name)}</p><div class="town-facts">${HOMETOWN.facts
         .map((f) => `<span class="tf"><i>${esc(f.k)}</i><b>${esc(f.v)}</b></span>`)

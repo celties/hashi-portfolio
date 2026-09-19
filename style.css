@@ -683,3 +683,22 @@ body.lock{overflow:hidden}
 
 .px-card .px-believe{top:-10%}
 .px-card .px-believe span{font-size:9px;letter-spacing:.18em}
+
+/* ---------- 診断から見た自分 ---------- */
+.pers{display:grid;gap:14px}
+.per{
+  padding:26px 24px;border:1px solid var(--line);border-radius:var(--r-lg);
+  background:linear-gradient(160deg,rgba(18,35,58,.8),rgba(11,22,34,.4));
+  transition:border-color .3s,transform .3s var(--ease);
+}
+.per:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.per-h{display:flex;align-items:center;gap:16px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.per-code{
+  font-family:var(--en);font-weight:700;font-size:15px;letter-spacing:.06em;flex:none;
+  padding:10px 14px;border-radius:12px;color:var(--orange);
+  background:var(--orange-soft);border:1px solid rgba(242,98,46,.24);
+}
+.per-tag{font-family:var(--en);font-size:10.5px;letter-spacing:.12em;color:var(--txt-3);text-transform:uppercase}
+.per-name{font-size:1.08rem;font-weight:700;line-height:1.4;margin-top:2px}
+.per-desc{font-size:13.6px;color:var(--txt-2);line-height:2;margin-bottom:18px}
+.per-mine{font-size:13.8px;color:var(--txt);line-height:2}
