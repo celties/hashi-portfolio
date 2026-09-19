@@ -492,3 +492,66 @@ body.lock{overflow:hidden}
 .tf b{font-size:13.5px;font-weight:500}
 .town-body p{font-size:14px;color:var(--txt-2);line-height:2;margin-bottom:13px}
 .town-body p:last-child{margin-bottom:0;color:var(--gold)}
+
+/* =========================================================
+   Study — 大学での学び
+   ========================================================= */
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(390px,1fr));gap:16px}
+.pl{
+  position:relative;padding:30px 28px;overflow:hidden;
+  border:1px solid var(--line);border-radius:var(--r-lg);
+  background:linear-gradient(165deg,rgba(18,35,58,.85),rgba(11,22,34,.45));
+  transition:border-color .3s,transform .35s var(--ease);
+}
+.pl:hover{border-color:var(--line-2);transform:translateY(-4px)}
+.pl-h{display:flex;align-items:flex-start;gap:16px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.pl-no{
+  font-family:var(--en);font-size:1.5rem;font-weight:700;line-height:1;flex:none;
+  width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  color:var(--orange);background:var(--orange-soft);border:1px solid rgba(242,98,46,.22);
+}
+.pl-t{font-size:1.1rem;font-weight:700;line-height:1.45;letter-spacing:-.01em}
+.pl-tag{font-size:12.5px;color:var(--gold);margin-top:3px}
+.pl-k{
+  font-family:var(--en);font-size:10.5px;letter-spacing:.14em;color:var(--txt-3);
+  text-transform:uppercase;margin-bottom:8px;
+}
+.pl-k:not(:first-of-type){margin-top:20px}
+.pl-p{font-size:13.8px;color:var(--txt-2);line-height:2}
+.pl-list{list-style:none;display:grid;gap:10px}
+.pl-list li{position:relative;padding-left:20px;font-size:13.8px;color:var(--txt);line-height:1.95}
+.pl-list li::before{content:"";position:absolute;left:3px;top:.78em;width:6px;height:6px;border-radius:2px;background:var(--orange)}
+.pl-aim{
+  font-size:13.5px;line-height:2;color:var(--txt-2);
+  padding:14px 16px;border-left:2px solid var(--gold);border-radius:0 10px 10px 0;
+  background:rgba(200,169,106,.07);
+}
+.pl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+
+/* いま進めていること */
+.now{margin-top:16px}
+.now-card{
+  padding:30px 28px;border:1px solid rgba(242,98,46,.3);border-radius:var(--r-lg);
+  background:linear-gradient(150deg,rgba(242,98,46,.13),rgba(18,35,58,.6) 60%);
+}
+.now-label{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--en);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:12px;
+}
+.now-title{font-size:1.2rem;font-weight:700;line-height:1.5;margin-bottom:12px}
+.now-body{font-size:14.5px;color:var(--txt-2);line-height:2.05;max-width:72ch}
+
+/* 3つの軸 */
+.axes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.ax{position:relative;padding:24px 22px;border:1px solid var(--line);border-radius:var(--r-lg);background:rgba(18,35,58,.42)}
+.ax-n{font-family:var(--en);font-size:11.5px;letter-spacing:.14em;color:var(--orange);font-weight:500}
+.ax-l{font-size:15px;font-weight:700;line-height:1.65;margin:7px 0 7px}
+.ax-note{font-size:12.5px;color:var(--txt-3);line-height:1.8}
+.closing{margin-top:26px;font-size:14.5px;color:var(--gold);line-height:2}
+
+@media (max-width:860px){
+  .pillars{grid-template-columns:1fr}
+  .pl{padding:26px 22px}
+}

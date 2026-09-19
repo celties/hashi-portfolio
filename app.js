@@ -113,6 +113,41 @@
         )}</span></div><p class="ex-org">${esc(e.org)}</p><p class="ex-note">${esc(e.note)}</p></div>`
     ).join("");
 
+    $("#studyLead").textContent = STUDY.lead;
+    $("#studyClosing").textContent = STUDY.closing;
+
+    $("#pillars").innerHTML = STUDY.pillars
+      .map(
+        (p) => `<article class="pl rv">
+            <header class="pl-h">
+              <span class="pl-no">${esc(p.no)}</span>
+              <div><h4 class="pl-t">${esc(p.title)}</h4><p class="pl-tag">${esc(p.tagline)}</p></div>
+            </header>
+            <p class="pl-k">きっかけ</p>
+            <p class="pl-p">${esc(p.trigger)}</p>
+            <p class="pl-k">やったこと</p>
+            <ul class="pl-list">${p.actions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+            <p class="pl-k">ねらい</p>
+            <p class="pl-aim">${esc(p.aim)}</p>
+            <div class="pl-tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+          </article>`
+      )
+      .join("");
+
+    $("#studyNow").innerHTML =
+      `<div class="now-card rv"><p class="now-label"><span class="pulse"></span>${esc(
+        STUDY.now.label
+      )}</p><p class="now-title">${esc(STUDY.now.title)}</p><p class="now-body">${esc(STUDY.now.body)}</p></div>`;
+
+    $("#axes").innerHTML = STUDY.axes
+      .map(
+        (x) =>
+          `<div class="ax rv"><span class="ax-n">${esc(x.n)}</span><p class="ax-l">${esc(
+            x.label
+          )}</p><p class="ax-note">${esc(x.note)}</p></div>`
+      )
+      .join("");
+
     $("#careerTop").innerHTML =
       `<div class="cr-top rv"><div class="cr-goals"><div><p class="cr-k">目標</p><p class="cr-v">${esc(
         CAREER.goal
