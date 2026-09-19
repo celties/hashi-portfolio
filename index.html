@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css?v=3" />
+<link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
 
@@ -29,8 +29,9 @@
     <nav class="nav-links">
       <a href="#works">Works</a>
       <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#career">Career</a>
       <a href="#timeline">Timeline</a>
-      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -60,6 +61,8 @@
 
     <dl class="hero-stats" id="heroStats"></dl>
   </div>
+
+  <div class="hero-px" id="pxHero" aria-hidden="false"></div>
 
   <div class="scroll-hint" aria-hidden="true"><span></span>Scroll</div>
 </section>
@@ -91,10 +94,17 @@
         <h2 class="sec-title">わたしについて</h2>
       </header>
       <div class="about-body" id="aboutBody"></div>
+
+      <h3 class="sub-h">ここまでのルーツ</h3>
+      <ol class="roots" id="roots"></ol>
     </div>
 
     <aside class="about-side">
       <div class="card-profile">
+        <div class="px-card">
+          <div class="px-mount" id="pxAbout"></div>
+          <p class="px-cap">ドット絵のわたし</p>
+        </div>
         <div class="pf-top">
           <div class="pf-avatar" aria-hidden="true">H</div>
           <div>
@@ -121,11 +131,44 @@
   </div>
 </section>
 
+<!-- ============ INTERESTS ============ -->
+<section class="sec" id="interests">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-num">03 — Interests</p>
+      <h2 class="sec-title">好きなこと、得意なこと</h2>
+      <p class="sec-lead">つくったものの裏側には、だいたいこのどれかがあります。</p>
+    </header>
+
+    <div class="likes" id="likes"></div>
+
+    <h3 class="sub-h">自分の強みだと思っていること</h3>
+    <div class="strengths" id="strengths"></div>
+  </div>
+</section>
+
+<!-- ============ CAREER ============ -->
+<section class="sec sec-alt" id="career">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-num">04 — Career</p>
+      <h2 class="sec-title">経験と、これから</h2>
+    </header>
+
+    <h3 class="sub-h">これまでの仕事・活動</h3>
+    <div class="exp" id="exp"></div>
+
+    <h3 class="sub-h">考えている進路</h3>
+    <div class="career-top" id="careerTop"></div>
+    <div class="career" id="careerGroups"></div>
+  </div>
+</section>
+
 <!-- ============ TIMELINE ============ -->
 <section class="sec" id="timeline">
   <div class="wrap">
     <header class="sec-head">
-      <p class="sec-num">03 — Timeline</p>
+      <p class="sec-num">05 — Timeline</p>
       <h2 class="sec-title">ここまでの道のり</h2>
       <p class="sec-lead">2026年4月に1本目のスクリプトを書いてから、およそ半年の記録です。</p>
     </header>
@@ -137,7 +180,7 @@
 <section class="sec sec-alt" id="skills">
   <div class="wrap">
     <header class="sec-head">
-      <p class="sec-num">04 — Skills</p>
+      <p class="sec-num">06 — Skills</p>
       <h2 class="sec-title">使ってきた道具</h2>
       <p class="sec-lead">どれも「作りたいものがあったから触った」順に増えてきました。</p>
     </header>
@@ -149,7 +192,7 @@
 <section class="sec sec-contact" id="contact">
   <div class="wrap">
     <header class="sec-head center">
-      <p class="sec-num">05 — Contact</p>
+      <p class="sec-num">07 — Contact</p>
       <h2 class="sec-title">連絡はこちらから</h2>
       <p class="sec-lead">作りたいものの相談も、ただの感想も歓迎です。</p>
     </header>
@@ -175,7 +218,8 @@
   </div>
 </div>
 
-<script src="data.js?v=3"></script>
-<script src="app.js?v=3"></script>
+<script src="data.js?v=6"></script>
+<script src="pixel.js?v=6"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

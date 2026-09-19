@@ -79,6 +79,51 @@
         `<div class="sk rv"><h3>${esc(g.group)}</h3><ul>${g.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>`
     ).join("");
 
+
+    $("#roots").innerHTML = ROOTS.map(
+      (r) =>
+        `<li><span class="rt-year">${esc(r.year)}</span><span class="rt-body"><b>${esc(r.title)}</b>${
+          r.note ? `<i>${esc(r.note)}</i>` : ""
+        }</span></li>`
+    ).join("");
+
+    $("#likes").innerHTML = INTERESTS.map(
+      (i) =>
+        `<div class="like rv"><span class="like-e" aria-hidden="true">${i.emoji}</span><div><p class="like-t">${esc(
+          i.label
+        )}</p><p class="like-n">${esc(i.note)}</p></div></div>`
+    ).join("");
+
+    $("#strengths").innerHTML = STRENGTHS.map(
+      (t, n) =>
+        `<div class="str rv"><span class="str-n">0${n + 1}</span><p class="str-t">${esc(t.title)}</p><p class="str-b">${esc(
+          t.note
+        )}</p></div>`
+    ).join("");
+
+    $("#exp").innerHTML = EXPERIENCE.map(
+      (e) =>
+        `<div class="ex rv"><div class="ex-h"><p class="ex-role">${esc(e.role)}</p><span class="badge">${esc(
+          e.period
+        )}</span></div><p class="ex-org">${esc(e.org)}</p><p class="ex-note">${esc(e.note)}</p></div>`
+    ).join("");
+
+    $("#careerTop").innerHTML =
+      `<div class="cr-top rv"><div class="cr-goals"><div><p class="cr-k">目標</p><p class="cr-v">${esc(
+        CAREER.goal
+      )}</p></div><div><p class="cr-k">軸</p><p class="cr-v">${esc(
+        CAREER.axis
+      )}</p></div></div><p class="cr-lead">${esc(CAREER.lead)}</p></div>`;
+
+    $("#careerGroups").innerHTML = CAREER.groups
+      .map(
+        (g) =>
+          `<div class="cr rv"><p class="cr-label">${esc(g.label)}</p><p class="cr-note">${esc(
+            g.note
+          )}</p><div class="cr-items">${g.items.map((i) => `<span class="co">${esc(i)}</span>`).join("")}</div></div>`
+      )
+      .join("");
+
     $("#contacts").innerHTML = PROFILE.contacts
       .map(
         (c) =>
