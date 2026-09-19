@@ -42,7 +42,7 @@
     $("#heroStats").innerHTML = stats
       .map(
         (s) => `<div class="st"><dt>${esc(s.k)}</dt><dd>${
-          typeof s.v === "number" ? `<span class="count" data-to="${s.v}">0</span>` : esc(s.v)
+          typeof s.v === "number" ? `<span class="count" data-to="${Number(s.v)}">0</span>` : esc(s.v)
         }${s.u ? `<small>${esc(s.u)}</small>` : ""}</dd></div>`
       )
       .join("");
@@ -110,7 +110,7 @@
 
     $("#likes").innerHTML = INTERESTS.map(
       (i) =>
-        `<div class="like rv"><span class="like-e" aria-hidden="true">${i.emoji}</span><div><p class="like-t">${esc(
+        `<div class="like rv"><span class="like-e" aria-hidden="true">${esc(i.emoji)}</span><div><p class="like-t">${esc(
           i.label
         )}</p><p class="like-n">${esc(i.note)}</p></div></div>`
     ).join("");
