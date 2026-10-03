@@ -14,6 +14,7 @@
     const el = $("#heroLead");
     const text = PROFILE.tagline;
     if (!el) return;
+    el.textContent = ""; // build.mjs が埋めた静的テキストを消してから打ち直す
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.textContent = text;
       return;
@@ -231,22 +232,22 @@
     const tags = p.tech.slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
     const rest = p.tech.length > 4 ? `<span class="tag more">+${p.tech.length - 4}</span>` : "";
     return `
-      <button class="card${p.featured ? " feat" : ""}" data-id="${esc(p.id)}" style="animation-delay:${i * 45}ms">
-        <div class="card-top">
+      <a class="card${p.featured ? " feat" : ""}" href="works/${esc(p.id)}/" data-id="${esc(p.id)}" style="animation-delay:${i * 45}ms">
+        <span class="card-top">
           <span class="card-emoji" aria-hidden="true">${p.emoji}</span>
           <span class="card-h">
             <span class="card-title">${esc(p.title)}</span>
             <span class="card-sub">${esc(p.subtitle)}</span>
           </span>
-        </div>
-        <div class="card-meta">
+        </span>
+        <span class="card-meta">
           <span class="badge">${esc(p.period)}</span>
           <span class="badge">${esc((CATEGORIES.find((c) => c.id === p.category) || {}).label || "")}</span>
-        </div>
-        <p class="card-sum">${esc(p.summary)}</p>
-        <div class="card-tech">${tags}${rest}</div>
+        </span>
+        <span class="card-sum">${esc(p.summary)}</span>
+        <span class="card-tech">${tags}${rest}</span>
         <span class="card-more">詳しく見る <span class="arw">→</span></span>
-      </button>`;
+      </a>`;
   }
 
   let current = "all";
@@ -319,7 +320,11 @@
               .map((l) => `<a class="m-link" href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)} <span class="arw">↗</span></a>`)
               .join("")}</div>`
           : ""
-      }`;
+      }
+      <div class="m-page">
+        <a class="btn btn-ghost" href="works/${esc(p.id)}/">この作品のページを開く <span class="arw">→</span></a>
+        <p>シェアするときは、作品ページのURLを使うとカード画像つきで表示されます。</p>
+      </div>`;
 
     modal.hidden = false;
     document.body.classList.add("lock");
@@ -333,8 +338,12 @@
   }
 
   document.addEventListener("click", (e) => {
-    const card = e.target.closest(".card");
-    if (card) return openModal(card.dataset.id);
+    const card = e.target.closest("#grid .card");
+    // 普通のクリックはモーダル。新しいタブで開く操作はそのまま作品ページへ
+    if (card && !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0)) {
+      e.preventDefault();
+      return openModal(card.dataset.id);
+    }
     if (e.target.closest("[data-close]")) closeModal();
   });
   document.addEventListener("keydown", (e) => {

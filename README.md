@@ -29,7 +29,9 @@ AGENTS.md    引き継ぎドキュメント（Codex が自動で読む）
 CLAUDE.md    AGENTS.md を読み込むだけの1行（Claude Code 用）
 ```
 
-ビルド不要の静的サイトです。依存パッケージはありません。
+依存パッケージのない静的サイトです。`data.js` を直したら `node build.mjs` で
+作品ページ（`works/<id>/`）・一覧・sitemap を書き出してから push します。
+シェア画像は `python3 tools/og.py` で作り直せます。
 
 ## ローカルで見る
 
@@ -41,7 +43,7 @@ python3 -m http.server 8080
 
 ## 作品を追加する
 
-`data.js` の `PROJECTS` 配列の先頭にオブジェクトを1つ足すだけで、カード・件数・絞り込み・モーダルすべてに反映されます。
+`data.js` の `PROJECTS` 配列の先頭にオブジェクトを1つ足し、`python3 tools/og.py && node build.mjs` を実行すると、カード・件数・絞り込み・モーダル・作品ページ・シェア画像すべてに反映されます。
 
 ```js
 {

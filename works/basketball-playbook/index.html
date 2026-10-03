@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>バスケ作戦版｜プレイブック作成・管理アプリ — 橋本勇太のつくったもの</title>
+<meta name="description" content="コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。" />
+<link rel="canonical" href="https://celties.github.io/hashi-portfolio/works/basketball-playbook/" />
+<meta name="theme-color" content="#0B1622" />
+<meta property="og:site_name" content="橋本勇太 / Hashi — Works" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="バスケ作戦版｜プレイブック作成・管理アプリ — 橋本勇太のつくったもの" />
+<meta property="og:description" content="コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。" />
+<meta property="og:url" content="https://celties.github.io/hashi-portfolio/works/basketball-playbook/" />
+<meta property="og:image" content="https://celties.github.io/hashi-portfolio/og/basketball-playbook.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../../apple-touch-icon.png" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../style.css?v=34" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"バスケ作戦版","alternativeHeadline":"プレイブック作成・管理アプリ","description":"コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。","url":"https://celties.github.io/hashi-portfolio/works/basketball-playbook/","image":"https://celties.github.io/hashi-portfolio/og/basketball-playbook.png","genre":"バスケットボール","keywords":"Next.js, TypeScript, Canvas, LocalStorage, Claude Vision API, YouTube API","inLanguage":"ja","author":{"@type":"Person","@id":"https://celties.github.io/hashi-portfolio/#person","name":"橋本勇太","alternateName":["Yuta Hashimoto","Hashi"],"url":"https://celties.github.io/hashi-portfolio/","image":"https://celties.github.io/hashi-portfolio/og/default.png","jobTitle":"理学療法学生","affiliation":{"@type":"CollegeOrUniversity","name":"東京都立大学"},"knowsAbout":["理学療法","バスケットボール","個人開発","業務自動化","動画制作"],"sameAs":["https://github.com/celties","https://www.instagram.com/nbatrainerfromjapan/"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://celties.github.io/hashi-portfolio/"},{"@type":"ListItem","position":2,"name":"つくったもの","item":"https://celties.github.io/hashi-portfolio/works/"},{"@type":"ListItem","position":3,"name":"バスケ作戦版","item":"https://celties.github.io/hashi-portfolio/works/basketball-playbook/"}]}</script>
+</head>
+<body class="page">
+<header class="nav solid">
+  <div class="nav-in">
+    <a class="brand" href="../../">
+      <span class="brand-mark">H</span>
+      <span class="brand-txt">Hashi<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links page-links">
+      <a href="../../#about">Profile</a>
+      <a href="../../works/">Works</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wp">
+  <article class="wrap wp-in">
+    <nav class="crumbs" aria-label="パンくず"><a href="../../">トップ</a><span>/</span><a href="../../works/">つくったもの</a><span>/</span><b>バスケ作戦版</b></nav>
+
+    <header class="m-top wp-top">
+      <span class="m-emoji" aria-hidden="true">🏀</span>
+      <div>
+        <h1 class="m-title">バスケ作戦版</h1>
+        <p class="m-sub">プレイブック作成・管理アプリ</p>
+      </div>
+    </header>
+    <div class="m-meta">
+      <span class="badge">2026.06</span>
+      <a class="badge" href="../../works/#basketball">バスケットボール</a>
+    </div>
+
+    <p class="m-sum">コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。</p>
+
+    <h2 class="m-h">なぜ作ったか・どう作ったか</h2>
+    <div class="m-body"><p>ハーフコートオフェンスと、サイドライン／エンドラインのインバウンズプレイを登録・管理できます。プレイをステップに分割すると、そのまま動きを再生して確認できます。</p><p>V/O/D/C/P/B/S/G のキーボードショートカットで、ツールを持ち替えずに素早く作図できるようにしました。</p><p>バスケのプレイ写真やスクショをアップロードすると、AIが選手位置を読み取って自動配置する機能も入れています。YouTubeの試合動画を横に並べ、タイムスタンプを記録しながら作図することもできます。</p></div>
+    <h2 class="m-h">HIGHLIGHTS</h2><ul class="m-list"><li>カット・パス・ドリブルを線種で描き分け</li><li>ステップ分割してアニメーション再生</li><li>写真から選手位置をAIが自動配置</li><li>YouTube動画と並べて作図</li></ul>
+    <h2 class="m-h">TECH STACK</h2>
+    <div class="m-tech"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Canvas</span><span class="tag">LocalStorage</span><span class="tag">Claude Vision API</span><span class="tag">YouTube API</span></div>
+    <div class="m-links"><a class="m-link" href="https://github.com/celties/basketball-playbook" target="_blank" rel="noopener">GitHub <span class="arw">↗</span></a></div>
+
+    <div class="share" data-url="https://celties.github.io/hashi-portfolio/works/basketball-playbook/" data-text="バスケ作戦版（プレイブック作成・管理アプリ）｜理学療法学生がつくったもの">
+  <p class="share-k">SHARE</p>
+  <div class="share-row">
+    <a class="sh" href="https://x.com/intent/post?text=%E3%83%90%E3%82%B9%E3%82%B1%E4%BD%9C%E6%88%A6%E7%89%88%EF%BC%88%E3%83%97%E3%83%AC%E3%82%A4%E3%83%96%E3%83%83%E3%82%AF%E4%BD%9C%E6%88%90%E3%83%BB%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA%EF%BC%89%EF%BD%9C%E7%90%86%E5%AD%A6%E7%99%82%E6%B3%95%E5%AD%A6%E7%94%9F%E3%81%8C%E3%81%A4%E3%81%8F%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE&amp;url=https%3A%2F%2Fcelties.github.io%2Fhashi-portfolio%2Fworks%2Fbasketball-playbook%2F" target="_blank" rel="noopener">X でポスト</a>
+    <a class="sh" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fcelties.github.io%2Fhashi-portfolio%2Fworks%2Fbasketball-playbook%2F" target="_blank" rel="noopener">LINE で送る</a>
+    <a class="sh" href="https://b.hatena.ne.jp/entry/s/celties.github.io/hashi-portfolio/works/basketball-playbook/" target="_blank" rel="noopener">はてブ</a>
+    <button class="sh" type="button" data-copy>リンクをコピー</button>
+    <button class="sh sh-native" type="button" data-native hidden>その他</button>
+  </div>
+</div>
+
+    <aside class="author">
+  <div class="author-mark" aria-hidden="true">H</div>
+  <div class="author-body">
+    <p class="author-k">つくった人</p>
+    <p class="author-name">橋本 勇太 <span>Yuta Hashimoto</span></p>
+    <p class="author-txt">東京都立大学で理学療法を学ぶ学生です。目標はNBAのアスレティックトレーナー。自分の生活で困ったことを、そのつど道具にしています。</p>
+    <div class="author-cta">
+      <a class="btn btn-primary" href="../../#about">プロフィールを見る</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/nbatrainerfromjapan/" target="_blank" rel="noopener">Instagram @nbatrainerfromjapan</a>
+    </div>
+  </div>
+</aside>
+
+    <h2 class="wp-h">ほかの「バスケットボール」の作品</h2>
+    <div class="grid-works wp-rel"><a class="card" href="../../works/basketball-stats/" data-id="basketball-stats">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">📊</span>
+          <span class="card-h">
+            <span class="card-title">basketball-stats</span>
+            <span class="card-sub">試合スタッツ記録アプリ</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06 — 2026.08</span>
+          <span class="badge">バスケットボール</span>
+        </span>
+        <span class="card-sum">試合中にスタッツを打ち込み、チーム・選手・キャリア単位で集計するモバイルアプリ。React Native（Expo）でiOS・Android・Webを1つのコードベースから出しています。</span>
+        <span class="card-tech"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Expo Router</span><span class="tag">TypeScript</span><span class="tag more">+2</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a><a class="card" href="../../works/celtics-zukan/" data-id="celtics-zukan">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">☘️</span>
+          <span class="card-h">
+            <span class="card-title">セルティックス図鑑</span>
+            <span class="card-sub">ボストン・セルティックス百科事典</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06</span>
+          <span class="badge">バスケットボール</span>
+        </span>
+        <span class="card-sum">現役選手8名、レジェンド10名、優勝18回ぶんの歴史を日本語でまとめたファン向けの事典アプリ。</span>
+        <span class="card-tech"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Vanilla JavaScript</span><span class="tag">Vercel</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a><a class="card" href="../../works/worldcup-party/" data-id="worldcup-party">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">⚽️</span>
+          <span class="card-h">
+            <span class="card-title">観戦予想アプリ</span>
+            <span class="card-sub">日本 vs ブラジル</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06</span>
+          <span class="badge">バスケットボール</span>
+        </span>
+        <span class="card-sum">試合をみんなで観るときに、スコアや得点者を予想して盛り上がるための1ページアプリ。</span>
+        <span class="card-tech"><span class="tag">HTML</span><span class="tag">CSS (ダークモード対応)</span><span class="tag">Vanilla JavaScript</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a></div>
+
+    <nav class="pn" aria-label="前後の作品">
+      <a class="pn-a" href="../../works/magical-journal/"><span>← 前の作品</span><b>🕯️ 魔法の日記帳</b></a>
+      <a class="pn-a pn-next" href="../../works/basketball-stats/"><span>次の作品 →</span><b>📊 basketball-stats</b></a>
+    </nav>
+    <p class="wp-all"><a class="btn btn-ghost" href="../../works/">つくったもの 17 本をすべて見る</a></p>
+  </article>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="foot-mark" href="../../">H<span class="dot">.</span></a>
+    <p>&copy; 2026 Yuta Hashimoto</p>
+  </div>
+</footer>
+<script src="../../share.js?v=34" defer></script>
+</body>
+</html>

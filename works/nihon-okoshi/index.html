@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>日本は俺が起こす｜早起き習慣トラッカー — 橋本勇太のつくったもの</title>
+<meta name="description" content="日の出時刻より前に起きられたかを毎朝記録して、ストリークとグレードで可視化する習慣アプリ。Mac用デスクトップ版とWeb版の二系統を持ちます。" />
+<link rel="canonical" href="https://celties.github.io/hashi-portfolio/works/nihon-okoshi/" />
+<meta name="theme-color" content="#0B1622" />
+<meta property="og:site_name" content="橋本勇太 / Hashi — Works" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="日本は俺が起こす｜早起き習慣トラッカー — 橋本勇太のつくったもの" />
+<meta property="og:description" content="日の出時刻より前に起きられたかを毎朝記録して、ストリークとグレードで可視化する習慣アプリ。Mac用デスクトップ版とWeb版の二系統を持ちます。" />
+<meta property="og:url" content="https://celties.github.io/hashi-portfolio/works/nihon-okoshi/" />
+<meta property="og:image" content="https://celties.github.io/hashi-portfolio/og/nihon-okoshi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../../apple-touch-icon.png" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../style.css?v=34" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"日本は俺が起こす","alternativeHeadline":"早起き習慣トラッカー","description":"日の出時刻より前に起きられたかを毎朝記録して、ストリークとグレードで可視化する習慣アプリ。Mac用デスクトップ版とWeb版の二系統を持ちます。","url":"https://celties.github.io/hashi-portfolio/works/nihon-okoshi/","image":"https://celties.github.io/hashi-portfolio/og/nihon-okoshi.png","genre":"習慣・記録","keywords":"Python 3.13, Tkinter, Next.js 16, React 19, Notion API, Vercel, launchd","inLanguage":"ja","author":{"@type":"Person","@id":"https://celties.github.io/hashi-portfolio/#person","name":"橋本勇太","alternateName":["Yuta Hashimoto","Hashi"],"url":"https://celties.github.io/hashi-portfolio/","image":"https://celties.github.io/hashi-portfolio/og/default.png","jobTitle":"理学療法学生","affiliation":{"@type":"CollegeOrUniversity","name":"東京都立大学"},"knowsAbout":["理学療法","バスケットボール","個人開発","業務自動化","動画制作"],"sameAs":["https://github.com/celties","https://www.instagram.com/nbatrainerfromjapan/"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://celties.github.io/hashi-portfolio/"},{"@type":"ListItem","position":2,"name":"つくったもの","item":"https://celties.github.io/hashi-portfolio/works/"},{"@type":"ListItem","position":3,"name":"日本は俺が起こす","item":"https://celties.github.io/hashi-portfolio/works/nihon-okoshi/"}]}</script>
+</head>
+<body class="page">
+<header class="nav solid">
+  <div class="nav-in">
+    <a class="brand" href="../../">
+      <span class="brand-mark">H</span>
+      <span class="brand-txt">Hashi<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links page-links">
+      <a href="../../#about">Profile</a>
+      <a href="../../works/">Works</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wp">
+  <article class="wrap wp-in">
+    <nav class="crumbs" aria-label="パンくず"><a href="../../">トップ</a><span>/</span><a href="../../works/">つくったもの</a><span>/</span><b>日本は俺が起こす</b></nav>
+
+    <header class="m-top wp-top">
+      <span class="m-emoji" aria-hidden="true">🌅</span>
+      <div>
+        <h1 class="m-title">日本は俺が起こす</h1>
+        <p class="m-sub">早起き習慣トラッカー</p>
+      </div>
+    </header>
+    <div class="m-meta">
+      <span class="badge">2026.05 —</span>
+      <a class="badge" href="../../works/#habit">習慣・記録</a>
+    </div>
+
+    <p class="m-sum">日の出時刻より前に起きられたかを毎朝記録して、ストリークとグレードで可視化する習慣アプリ。Mac用デスクトップ版とWeb版の二系統を持ちます。</p>
+
+    <h2 class="m-h">なぜ作ったか・どう作ったか</h2>
+    <div class="m-body"><p>最初はPythonとTkで約2,700行のMacアプリとして書きました。Open-Meteo APIでその日の日の出時刻を取り、起床時刻と比べてS/A/B/Cのグレードを出します。夜の準備チェックリストを終えないと朝の解除ができない「起床ロック」や、バッジ、週次スコアカードも入っています。</p><p>外出先でも使いたくなったので、同じ機能をNext.js + Notion APIで再実装してVercelに公開しました。同じNotion DBを読むので、MacアプリとWeb版を並行して使えます。</p><p>launchdで毎晩23時に夜準備画面、朝はMacを開いた瞬間にホーム画面が自動で立ち上がります。</p></div>
+    <h2 class="m-h">HIGHLIGHTS</h2><ul class="m-list"><li>日の出APIと連動したグレード判定</li><li>夜×朝のチェックリストによる起床ロック</li><li>仲間タブでランキング共有</li><li>Mac版とWeb版で同じNotion DBを共有</li></ul>
+    <h2 class="m-h">TECH STACK</h2>
+    <div class="m-tech"><span class="tag">Python 3.13</span><span class="tag">Tkinter</span><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">Notion API</span><span class="tag">Vercel</span><span class="tag">launchd</span></div>
+    <div class="m-links"><a class="m-link" href="https://nihon-okoshi.vercel.app" target="_blank" rel="noopener">公開サイト <span class="arw">↗</span></a></div>
+
+    <div class="share" data-url="https://celties.github.io/hashi-portfolio/works/nihon-okoshi/" data-text="日本は俺が起こす（早起き習慣トラッカー）｜理学療法学生がつくったもの">
+  <p class="share-k">SHARE</p>
+  <div class="share-row">
+    <a class="sh" href="https://x.com/intent/post?text=%E6%97%A5%E6%9C%AC%E3%81%AF%E4%BF%BA%E3%81%8C%E8%B5%B7%E3%81%93%E3%81%99%EF%BC%88%E6%97%A9%E8%B5%B7%E3%81%8D%E7%BF%92%E6%85%A3%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%EF%BC%89%EF%BD%9C%E7%90%86%E5%AD%A6%E7%99%82%E6%B3%95%E5%AD%A6%E7%94%9F%E3%81%8C%E3%81%A4%E3%81%8F%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE&amp;url=https%3A%2F%2Fcelties.github.io%2Fhashi-portfolio%2Fworks%2Fnihon-okoshi%2F" target="_blank" rel="noopener">X でポスト</a>
+    <a class="sh" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fcelties.github.io%2Fhashi-portfolio%2Fworks%2Fnihon-okoshi%2F" target="_blank" rel="noopener">LINE で送る</a>
+    <a class="sh" href="https://b.hatena.ne.jp/entry/s/celties.github.io/hashi-portfolio/works/nihon-okoshi/" target="_blank" rel="noopener">はてブ</a>
+    <button class="sh" type="button" data-copy>リンクをコピー</button>
+    <button class="sh sh-native" type="button" data-native hidden>その他</button>
+  </div>
+</div>
+
+    <aside class="author">
+  <div class="author-mark" aria-hidden="true">H</div>
+  <div class="author-body">
+    <p class="author-k">つくった人</p>
+    <p class="author-name">橋本 勇太 <span>Yuta Hashimoto</span></p>
+    <p class="author-txt">東京都立大学で理学療法を学ぶ学生です。目標はNBAのアスレティックトレーナー。自分の生活で困ったことを、そのつど道具にしています。</p>
+    <div class="author-cta">
+      <a class="btn btn-primary" href="../../#about">プロフィールを見る</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/nbatrainerfromjapan/" target="_blank" rel="noopener">Instagram @nbatrainerfromjapan</a>
+    </div>
+  </div>
+</aside>
+
+    <h2 class="wp-h">ほかの「習慣・記録」の作品</h2>
+    <div class="grid-works wp-rel"><a class="card feat" href="../../works/kintore-dojo/" data-id="kintore-dojo">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">🏋️</span>
+          <span class="card-h">
+            <span class="card-title">筋トレ道場</span>
+            <span class="card-sub">筋トレ記録Webアプリ</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06 —</span>
+          <span class="badge">習慣・記録</span>
+        </span>
+        <span class="card-sum">種目・重量・セット・レップを記録して、部位別の履歴と重量推移グラフで伸びを追う筋トレアプリ。食事写真のカロリー推定とジム滞在時間の記録まで入っています。</span>
+        <span class="card-tech"><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind v4</span><span class="tag more">+4</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a><a class="card" href="../../works/magical-journal/" data-id="magical-journal">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">🕯️</span>
+          <span class="card-h">
+            <span class="card-title">魔法の日記帳</span>
+            <span class="card-sub">ホグワーツ風の日記PWA</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06</span>
+          <span class="badge">習慣・記録</span>
+        </span>
+        <span class="card-sum">本を開くアニメーションから始まる、ダークファンタジー世界観の日記アプリ。書いた内容はNotionに保存され、手書きページはOCRで取り込めます。</span>
+        <span class="card-tech"><span class="tag">HTML/CSS/JS (単一ファイル)</span><span class="tag">Vercel Serverless Functions</span><span class="tag">Notion API</span><span class="tag">OCR</span><span class="tag more">+2</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a><a class="card feat" href="../../works/basketball-playbook/" data-id="basketball-playbook">
+        <span class="card-top">
+          <span class="card-emoji" aria-hidden="true">🏀</span>
+          <span class="card-h">
+            <span class="card-title">バスケ作戦版</span>
+            <span class="card-sub">プレイブック作成・管理アプリ</span>
+          </span>
+        </span>
+        <span class="card-meta">
+          <span class="badge">2026.06</span>
+          <span class="badge">バスケットボール</span>
+        </span>
+        <span class="card-sum">コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。</span>
+        <span class="card-tech"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Canvas</span><span class="tag">LocalStorage</span><span class="tag more">+2</span></span>
+        <span class="card-more">詳しく見る <span class="arw">→</span></span>
+      </a></div>
+
+    <nav class="pn" aria-label="前後の作品">
+      <a class="pn-a" href="../../works/shukatsu/"><span>← 前の作品</span><b>🔍 就活 企業研究システム</b></a>
+      <a class="pn-a pn-next" href="../../works/kintore-dojo/"><span>次の作品 →</span><b>🏋️ 筋トレ道場</b></a>
+    </nav>
+    <p class="wp-all"><a class="btn btn-ghost" href="../../works/">つくったもの 17 本をすべて見る</a></p>
+  </article>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="foot-mark" href="../../">H<span class="dot">.</span></a>
+    <p>&copy; 2026 Yuta Hashimoto</p>
+  </div>
+</footer>
+<script src="../../share.js?v=34" defer></script>
+</body>
+</html>
