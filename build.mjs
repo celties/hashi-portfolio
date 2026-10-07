@@ -136,8 +136,6 @@ function authorBox(rel) {
 
 /* app.js の cardHTML と同じ見た目。リンク先だけ相対パスで切り替える */
 function cardHTML(p, rel) {
-  const tags = p.tech.slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
-  const rest = p.tech.length > 4 ? `<span class="tag more">+${p.tech.length - 4}</span>` : "";
   return `<a class="card${p.featured ? " feat" : ""}" href="${rel}works/${esc(p.id)}/" data-id="${esc(p.id)}">
         <span class="card-top">
           <span class="card-emoji" aria-hidden="true">${p.emoji}</span>
@@ -151,7 +149,6 @@ function cardHTML(p, rel) {
           <span class="badge">${esc(catLabel(p.category))}</span>
         </span>
         <span class="card-sum">${esc(p.summary)}</span>
-        <span class="card-tech">${tags}${rest}</span>
         <span class="card-more">詳しく見る <span class="arw">→</span></span>
       </a>`;
 }
@@ -181,7 +178,6 @@ function workPage(p, i) {
       url,
       image: `${SITE}og/${p.id}.png`,
       genre: cat,
-      keywords: p.tech.join(", "),
       inLanguage: "ja",
       author: PERSON,
     },
@@ -223,8 +219,6 @@ function workPage(p, i) {
         ? `<h2 class="m-h">HIGHLIGHTS</h2><ul class="m-list">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>`
         : ""
     }
-    <h2 class="m-h">TECH STACK</h2>
-    <div class="m-tech">${p.tech.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
     ${
       p.links && p.links.length
         ? `<div class="m-links">${p.links
@@ -256,7 +250,7 @@ function worksIndex() {
   const rel = "../";
   const path = "works/";
   const title = `つくったもの ${PROJECTS.length} 本 — 理学療法学生のアプリ・自動化・動画ツール｜橋本勇太`;
-  const desc = `理学療法学生・橋本勇太がつくってきた${PROJECTS.length}の作品の一覧。早起きトラッカー、筋トレ記録、バスケの作戦ボード、リール動画の自動生成、家計簿の自動登録など。`;
+  const desc = `理学療法学生・橋本勇太がつくってきた${PROJECTS.length}の作品の一覧。早起きトラッカー、筋トレ記録、3D解剖アトラス、手書き日記のタイピング動画、家計簿の自動登録など。`;
   const ld = [
     {
       "@context": "https://schema.org",

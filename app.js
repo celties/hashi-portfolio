@@ -33,11 +33,9 @@
 
   /* ---------- HERO : 数字 ---------- */
   function renderStats() {
-    const techs = new Set(PROJECTS.flatMap((p) => p.tech)).size;
     const stats = [
       { k: "Projects",   v: PROJECTS.length,                 u: "本" },
       { k: "Fields",     v: CATEGORIES.length - 1,           u: "分野" },
-      { k: "Tech Used",  v: techs,                            u: "種" },
       { k: "Since",      v: "2026.04",                        u: "" },
     ];
     $("#heroStats").innerHTML = stats
@@ -229,8 +227,6 @@
 
   /* ---------- WORKS ---------- */
   function cardHTML(p, i) {
-    const tags = p.tech.slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
-    const rest = p.tech.length > 4 ? `<span class="tag more">+${p.tech.length - 4}</span>` : "";
     return `
       <a class="card${p.featured ? " feat" : ""}" href="works/${esc(p.id)}/" data-id="${esc(p.id)}" style="animation-delay:${i * 45}ms">
         <span class="card-top">
@@ -245,7 +241,6 @@
           <span class="badge">${esc((CATEGORIES.find((c) => c.id === p.category) || {}).label || "")}</span>
         </span>
         <span class="card-sum">${esc(p.summary)}</span>
-        <span class="card-tech">${tags}${rest}</span>
         <span class="card-more">詳しく見る <span class="arw">→</span></span>
       </a>`;
   }
@@ -312,8 +307,6 @@
           ? `<p class="m-h">HIGHLIGHTS</p><ul class="m-list">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>`
           : ""
       }
-      <p class="m-h">TECH STACK</p>
-      <div class="m-tech">${p.tech.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
       ${
         p.links && p.links.length
           ? `<div class="m-links">${p.links

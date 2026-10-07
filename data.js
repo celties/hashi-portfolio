@@ -11,7 +11,7 @@ const PROFILE = {
   tagline: "身体 × データ で、毎日をちょっとだけ良くする道具をつくる。",
   intro: [
     "山梨県笛吹市の出身。東京都立大学で理学療法を学びながら、「あったら自分が助かる」と思ったものを片っ端からつくっています。",
-    "早起きが続かないからトラッカーを、家計簿が面倒だから自動登録を、バスケをもっと知りたいから図鑑を。動機はいつも自分の生活で、そこから実家の手伝いで毎日使われるアプリまで広がりました。",
+    "早起きが続かないからトラッカーを、家計簿が面倒だから自動登録を、筋トレの伸びを数字で見たいから記録アプリを。動機はいつも自分の生活で、そこから実家の手伝いで毎日使われるアプリまで広がりました。",
     "目標はNBAのアスレティックトレーナー。身体のことを深く理解する力と、道具を自分でつくれる力の両方を持った人になりたいと思っています。",
   ],
   contacts: [
@@ -90,25 +90,6 @@ const PROJECTS = [
 
   /* ---------- バスケットボール ---------- */
   {
-    id: "basketball-playbook",
-    title: "バスケ作戦版",
-    subtitle: "プレイブック作成・管理アプリ",
-    category: "basketball",
-    period: "2026.06",
-    featured: true,
-    emoji: "🏀",
-    summary:
-      "コート上に選手とカット・パス・スクリーンを描いてプレイを設計し、ステップごとにアニメーション再生できるプレイブックアプリ。",
-    body: [
-      "ハーフコートオフェンスと、サイドライン／エンドラインのインバウンズプレイを登録・管理できます。プレイをステップに分割すると、そのまま動きを再生して確認できます。",
-      "V/O/D/C/P/B/S/G のキーボードショートカットで、ツールを持ち替えずに素早く作図できるようにしました。",
-      "バスケのプレイ写真やスクショをアップロードすると、AIが選手位置を読み取って自動配置する機能も入れています。YouTubeの試合動画を横に並べ、タイムスタンプを記録しながら作図することもできます。",
-    ],
-    tech: ["Next.js", "TypeScript", "Canvas", "LocalStorage", "Claude Vision API", "YouTube API"],
-    links: [{ label: "GitHub", href: "https://github.com/celties/basketball-playbook" }],
-    highlights: ["カット・パス・ドリブルを線種で描き分け", "ステップ分割してアニメーション再生", "写真から選手位置をAIが自動配置", "YouTube動画と並べて作図"],
-  },
-  {
     id: "basketball-stats",
     title: "basketball-stats",
     subtitle: "試合スタッツ記録アプリ",
@@ -125,61 +106,8 @@ const PROJECTS = [
     links: [],
     highlights: ["iOS / Android / Web を1コードベースで", "Firestoreでの永続化と認証", "試合・チーム・キャリアの3階層で集計"],
   },
-  {
-    id: "celtics-zukan",
-    title: "セルティックス図鑑",
-    subtitle: "ボストン・セルティックス百科事典",
-    category: "basketball",
-    period: "2026.06",
-    emoji: "☘️",
-    summary:
-      "現役選手8名、レジェンド10名、優勝18回ぶんの歴史を日本語でまとめたファン向けの事典アプリ。",
-    body: [
-      "「セルティックスについて日本一詳しくなる」ための自分用の学習ツールとして作りました。現役選手・レジェンド・優勝歴の3タブ構成で、名前でも出身地でも実績の文章でもリアルタイムに検索できます。",
-      "カードをクリックするとモーダルでプロフィール・スタッツ・実績・エピソードが開きます。ダークなセルティックグリーンとゴールドで配色しました。",
-    ],
-    tech: ["HTML", "CSS", "Vanilla JavaScript", "Vercel"],
-    links: [{ label: "公開サイト", href: "https://celtics-zukan.vercel.app" }],
-    highlights: ["現役8名・レジェンド10名・優勝18回を収録", "全文リアルタイム検索", "時代別にグループ化した優勝年表"],
-  },
-  {
-    id: "worldcup-party",
-    title: "観戦予想アプリ",
-    subtitle: "日本 vs ブラジル",
-    category: "basketball",
-    period: "2026.06",
-    emoji: "⚽️",
-    summary:
-      "試合をみんなで観るときに、スコアや得点者を予想して盛り上がるための1ページアプリ。",
-    body: [
-      "観戦パーティー用に一晩で作った小品です。日本とブラジルのチームカラーをそのままテーマカラーにして、ライト／ダークどちらでも読めるように配色を組みました。",
-      "外部ライブラリなしの単一HTMLなので、URLを送るだけで全員の手元で動きます。",
-    ],
-    tech: ["HTML", "CSS (ダークモード対応)", "Vanilla JavaScript"],
-    links: [],
-    highlights: ["単一HTMLで完結・共有が簡単", "prefers-color-scheme でのダーク対応"],
-  },
 
   /* ---------- 動画・クリエイティブ ---------- */
-  {
-    id: "reelmaker",
-    title: "ReelMaker",
-    subtitle: "写真 → リール動画 自動生成",
-    category: "video",
-    period: "2026.05",
-    featured: true,
-    emoji: "🎬",
-    summary:
-      "写真フォルダを指定するだけで、Ken Burns・クロスフェード・ビート同期つきの縦型リール動画を書き出すローカルWebアプリ。",
-    body: [
-      "ブラウザで写真を並べ替え、アスペクト比（9:16 / 1:1 / 16:9）と字幕とBGMを決めると、サーバー側でMP4を生成します。書き出しはバックグラウンドで走り、進捗バーで状況が見えます。",
-      "librosaでBGMのビートを検出して、その拍に合わせて写真を切り替えるビートシンクを実装しました。EXIFから撮影日を読んで日付テロップを重ねることもできます。",
-      "字幕はキーボード入力のほか、Web Speech APIの音声入力でも打ち込めます。",
-    ],
-    tech: ["Python", "FastAPI", "uvicorn", "moviepy", "librosa", "Pillow / piexif", "Tailwind", "SortableJS"],
-    links: [],
-    highlights: ["librosaによるビート同期カット", "Ken Burns＋クロスフェード", "EXIF撮影日の自動テロップ", "音声入力で字幕を作成"],
-  },
   {
     id: "journal-reel",
     title: "journal-reel",
@@ -198,23 +126,6 @@ const PROJECTS = [
     tech: ["Python", "Pillow", "ffmpeg", "Notion File Upload API"],
     links: [],
     highlights: ["フェードゼロ、全部タイピングで見せる設計", "9:16 / 10秒 / タイムラインはJSONで調整", "生成からNotionページへの添付まで1コマンド"],
-  },
-  {
-    id: "nba-reel",
-    title: "nba-reel",
-    subtitle: "Remotion製リール動画テンプレート",
-    category: "video",
-    period: "2026.09 —",
-    emoji: "📱",
-    summary:
-      "台本のJSONを書くだけで、Instagram用の縦型リール（1080×1920）が1本書き上がる動画生成基盤。Reactで動画を組んでいます。",
-    body: [
-      "Remotionを使い、動画をReactコンポーネントとして記述しています。シーンの型・テーマカラー・図解パーツを部品化してあるので、新しい戦術解説を作るときは台本を差し替えるだけで済みます。",
-      "全リール共通の署名として、左下にオレンジのプログレスバーを入れています。カルーセル（フィード投稿）用のコンポーネントも同じテーマを共有しています。",
-    ],
-    tech: ["Remotion", "React 19", "TypeScript", "@remotion/google-fonts"],
-    links: [],
-    highlights: ["台本JSONだけで1本完成", "シーン型・図解を部品化", "リールとカルーセルでテーマ共通化"],
   },
   {
     id: "instagram",
@@ -254,24 +165,6 @@ const PROJECTS = [
     tech: ["Python", "IMAP", "Notion API", "launchd", "状態管理JSON"],
     links: [],
     highlights: ["毎日21:30に自動実行、取りこぼしは7日遡って回収", "速報メール→確定メールの二段更新", "同額・同日・同店の二重登録を防止", "カテゴリーと絵文字の自動付与"],
-  },
-  {
-    id: "kakeibo-receipt",
-    title: "家計簿 自動登録（レシート）",
-    subtitle: "写真1枚 → Notion",
-    category: "automation",
-    period: "2026.04",
-    emoji: "🧾",
-    summary:
-      "レシートを撮るだけでNotionの家計簿に支出が入るショートカット。OCRはmacOS内蔵のVision frameworkを使うので、APIキーも費用も要りません。",
-    body: [
-      "iPhoneやMacのショートカットから写真を渡すと、HEICをJPEGに変換してVision OCRにかけ、店名・金額・日付を抽出してNotionにページを作ります。",
-      "カテゴリーはキーワードで判定し、「その他」になったときだけ手元で選ばせます。ショートカット経由のときは確認をスキップして通知だけ返します。",
-      "メール通知が来ないPayPay残高払いは、この仕組みで補完しています。",
-    ],
-    tech: ["Python", "macOS Vision Framework (pyobjc)", "Notion API", "Apple Shortcuts", "sips"],
-    links: [],
-    highlights: ["OCRは端末内で完結、APIコストゼロ", "HEIC→JPEG自動変換", "ショートカット3ステップで完了"],
   },
   {
     id: "order-reader",
@@ -352,9 +245,9 @@ const PROJECTS = [
 
 const TIMELINE = [
   { date: "2024.04", title: "東京都立大学 入学", note: "理学療法を学び始める" },
-  { date: "2026.04", title: "ものづくりを始める", note: "レシート写真から家計簿を自動登録する仕組みが1本目" },
-  { date: "2026.05", title: "習慣と動画に広げる", note: "早起きトラッカーのMac版、ReelMaker、タスク自動化" },
-  { date: "2026.06", title: "つくる月", note: "セルティックス図鑑・PT Atlas・筋トレ道場・バスケ作戦版を相次いで公開" },
+  { date: "2026.04", title: "ものづくりを始める", note: "家計簿の自動登録が1本目" },
+  { date: "2026.05", title: "習慣と動画に広げる", note: "早起きトラッカーのMac版、タスク自動化" },
+  { date: "2026.06", title: "つくる月", note: "PT Atlas・筋トレ道場を相次いで公開" },
   { date: "2026.07", title: "自動で回る仕組みへ", note: "家計簿のメール版と就活企業研究の週次巡回が常時稼働に" },
   { date: "2026.08", title: "記録を作品にする", note: "journal-reel、早起きトラッカーのWeb版公開、スタッツアプリ" },
   { date: "2026.09", title: "自分の外へ", note: "Instagram運用を開始し、実家の手伝いから生まれた業務アプリを現場へ" },
@@ -408,7 +301,7 @@ const INTERESTS = [
 ];
 
 const STRENGTHS = [
-  { title: "困りごとを道具にする", note: "不便を我慢せず、その日のうちに動くものを作って回し始める。このサイトに並ぶ17本はほぼ全部その産物。" },
+  { title: "困りごとを道具にする", note: "不便を我慢せず、その日のうちに動くものを作って回し始める。このサイトに並ぶ作品は、ほぼ全部その産物。" },
   { title: "続く仕組みをつくる", note: "気合いではなく仕組みで続ける。毎日決まった時間に走る自動化を、1年近く止めずに運用している。" },
   { title: "3つの立場からコートを見た", note: "プレイヤー・学生コーチ・OBトレーナーのすべてを経験した。同じ1本のプレーが、やる側・教える側・支える側でどう違って見えるかを知っている。いまは大学のサークルで、運営する側にも回っている。" },
   { title: "身体とデータの両方を見る", note: "理学療法で学ぶ身体の知識と、記録・可視化の技術をつなげて考えられる。" },
@@ -530,7 +423,7 @@ const CAREER = {
     {
       no: "05",
       title: "道具を自分でつくれる状態を保つ",
-      note: "既製のツールを待たずに、必要なものを自分で組める。このサイトに並ぶ17本はその証明です。データを扱う現場で、これは効くはずだと思っています。",
+      note: "既製のツールを待たずに、必要なものを自分で組める。このサイトに並ぶ作品がその証明です。データを扱う現場で、これは効くはずだと思っています。",
     },
   ],
   closing:
