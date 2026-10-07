@@ -182,7 +182,7 @@ Works を後ろへ移した。この順番を勝手に戻さないこと。
 - **`.sec` に `position:relative` が付いている**ため、`element.offsetTop` は
   ドキュメント基準にならない。スクロール位置の計算には `getBoundingClientRect()` を使う
 - **ブラウザのキャッシュが強い。** CSSやJSを直したら `index.html` の
-  `?v=NN` を必ず上げること（現在 v=36）。build.mjs は index.html の値を作品ページにも使う。上げ忘れると反映されない
+  `?v=NN` を必ず上げること（現在 v=37）。build.mjs は index.html の値を作品ページにも使う。上げ忘れると反映されない
 - 差し込みは全て `esc()` を通す。`textContent` 代入は例外
 
 ---

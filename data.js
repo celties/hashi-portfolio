@@ -17,6 +17,7 @@ const PROFILE = {
   contacts: [
     { label: "Email", value: "0222yuuta@gmail.com", href: "mailto:0222yuuta@gmail.com" },
     { label: "GitHub", value: "@celties", href: "https://github.com/celties" },
+    { label: "LinkedIn", value: "hashimoto-yuta-tmu", href: "https://www.linkedin.com/in/hashimoto-yuta-tmu/" },
     { label: "Instagram", value: "@nbatrainerfromjapan", href: "https://www.instagram.com/nbatrainerfromjapan/" },
   ],
 };
