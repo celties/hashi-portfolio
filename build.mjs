@@ -53,7 +53,7 @@ function head({ title, desc, path, image, ld, rel }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}" />
 <link rel="canonical" href="${url}" />
-<meta name="theme-color" content="#0B1622" />
+<meta name="theme-color" content="#E8E8E8" />
 <meta property="og:site_name" content="橋本勇太 / Hashi — Works" />
 <meta property="og:locale" content="ja_JP" />
 <meta property="og:type" content="article" />
