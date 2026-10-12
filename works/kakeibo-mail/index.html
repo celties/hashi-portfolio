@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>家計簿 自動登録（メール）｜クレカ利用通知 → Notion — 橋本勇太のつくったもの</title>
-<meta name="description" content="カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。1年近く手を触れずに動き続けています。" />
+<meta name="description" content="カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。作成からおよそ3ヶ月、手を触れずに動き続けています。" />
 <link rel="canonical" href="https://celties.github.io/hashi-portfolio/works/kakeibo-mail/" />
 <meta name="theme-color" content="#E8E8E8" />
 <meta property="og:site_name" content="橋本勇太 / Hashi — Works" />
 <meta property="og:locale" content="ja_JP" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="家計簿 自動登録（メール）｜クレカ利用通知 → Notion — 橋本勇太のつくったもの" />
-<meta property="og:description" content="カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。1年近く手を触れずに動き続けています。" />
+<meta property="og:description" content="カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。作成からおよそ3ヶ月、手を触れずに動き続けています。" />
 <meta property="og:url" content="https://celties.github.io/hashi-portfolio/works/kakeibo-mail/" />
 <meta property="og:image" content="https://celties.github.io/hashi-portfolio/og/kakeibo-mail.png" />
 <meta property="og:image:width" content="1200" />
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../../style.css?v=37" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"家計簿 自動登録（メール）","alternativeHeadline":"クレカ利用通知 → Notion","description":"カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。1年近く手を触れずに動き続けています。","url":"https://celties.github.io/hashi-portfolio/works/kakeibo-mail/","image":"https://celties.github.io/hashi-portfolio/og/kakeibo-mail.png","genre":"自動化","inLanguage":"ja","author":{"@type":"Person","@id":"https://celties.github.io/hashi-portfolio/#person","name":"橋本勇太","alternateName":["Yuta Hashimoto","Hashi"],"url":"https://celties.github.io/hashi-portfolio/","image":"https://celties.github.io/hashi-portfolio/og/default.png","jobTitle":"理学療法学生","affiliation":{"@type":"CollegeOrUniversity","name":"東京都立大学"},"knowsAbout":["理学療法","バスケットボール","個人開発","業務自動化","動画制作"],"sameAs":["https://github.com/celties","https://www.linkedin.com/in/hashimoto-yuta-tmu/","https://www.instagram.com/nbatrainerfromjapan/"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"家計簿 自動登録（メール）","alternativeHeadline":"クレカ利用通知 → Notion","description":"カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。作成からおよそ3ヶ月、手を触れずに動き続けています。","url":"https://celties.github.io/hashi-portfolio/works/kakeibo-mail/","image":"https://celties.github.io/hashi-portfolio/og/kakeibo-mail.png","genre":"自動化","inLanguage":"ja","author":{"@type":"Person","@id":"https://celties.github.io/hashi-portfolio/#person","name":"橋本勇太","alternateName":["Yuta Hashimoto","Hashi"],"url":"https://celties.github.io/hashi-portfolio/","image":"https://celties.github.io/hashi-portfolio/og/default.png","jobTitle":"理学療法学生","affiliation":{"@type":"CollegeOrUniversity","name":"東京都立大学"},"knowsAbout":["理学療法","バスケットボール","個人開発","業務自動化","動画制作"],"sameAs":["https://github.com/celties","https://www.linkedin.com/in/hashimoto-yuta-tmu/","https://www.instagram.com/nbatrainerfromjapan/"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://celties.github.io/hashi-portfolio/"},{"@type":"ListItem","position":2,"name":"つくったもの","item":"https://celties.github.io/hashi-portfolio/works/"},{"@type":"ListItem","position":3,"name":"家計簿 自動登録（メール）","item":"https://celties.github.io/hashi-portfolio/works/kakeibo-mail/"}]}</script>
 </head>
 <body class="page">
@@ -56,7 +56,7 @@
       <a class="badge" href="../../works/#automation">自動化</a>
     </div>
 
-    <p class="m-sum">カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。1年近く手を触れずに動き続けています。</p>
+    <p class="m-sum">カード会社からの利用通知メールを毎日自動で読み取り、Notionの支出データベースにページを作る仕組み。作成からおよそ3ヶ月、手を触れずに動き続けています。</p>
 
     <h2 class="m-h">なぜ作ったか・どう作ったか</h2>
     <div class="m-body"><p>IMAPでGmailを取得し、行ラベル方式のパーサーで店名・金額・日付を抜き出してNotionに登録します。店名のキーワードからカテゴリーとページ絵文字まで自動で決まります。</p><p>楽天カードの「速報版」は金額しか届かないので、いったん仮登録しておき、後日届く確定メールで同じページの店名とカテゴリーを上書きする二段構えにしました。</p><p>実運用でぶつかった問題がそのまま設計になっています。NotionのDB自動化がAPI作成直後の日付を上書きするので10秒待って再設定する、launchdはDownloads配下を読めないので実行ファイルをホーム直下へ置く、macOSのバックグラウンド管理に拒否されて起動しなくなる——こうした落とし穴を1つずつ潰しました。</p></div>
