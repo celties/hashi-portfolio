@@ -104,14 +104,9 @@ function foot(rel) {
 }
 
 function shareBar(url, text) {
-  const u = encodeURIComponent(url);
-  const t = encodeURIComponent(text);
   return `<div class="share" data-url="${esc(url)}" data-text="${esc(text)}">
   <p class="share-k">SHARE</p>
   <div class="share-row">
-    <a class="sh" href="https://x.com/intent/post?text=${t}&amp;url=${u}" target="_blank" rel="noopener">X でポスト</a>
-    <a class="sh" href="https://social-plugins.line.me/lineit/share?url=${u}" target="_blank" rel="noopener">LINE で送る</a>
-    <a class="sh" href="https://b.hatena.ne.jp/entry/s/${esc(url.replace(/^https:\/\//, ""))}" target="_blank" rel="noopener">はてブ</a>
     <button class="sh" type="button" data-copy>リンクをコピー</button>
     <button class="sh sh-native" type="button" data-native hidden>その他</button>
   </div>
