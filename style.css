@@ -276,7 +276,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 /* ---------- CONTACT ---------- */
 .sec-contact{background:radial-gradient(ellipse 70% 100% at 50% 0%,rgba(242,98,46,.12),transparent 70%),var(--navy-900)}
-.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:880px;margin-inline:auto}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;max-width:960px;margin-inline:auto}
 .ct{
   display:flex;align-items:center;gap:16px;padding:22px 24px;
   border:1px solid var(--line);border-radius:var(--r-lg);
