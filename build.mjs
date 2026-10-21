@@ -98,6 +98,7 @@ function foot(rel) {
   </div>
 </footer>
 <script src="${rel}share.js?v=${V}" defer></script>
+<script src="${rel}motion.js?v=${V}" defer></script>
 </body>
 </html>
 `;
